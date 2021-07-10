@@ -1,0 +1,44 @@
+/** @format */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+:root {
+	--dark: hsl(208, 29%, 23%);
+	--white: hsl(0, 0%, 100%);
+}
+ul {
+	margin-left: auto;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+ul li {
+	width: 200px;
+	height: 280px;
+	background-color: var(--dark);
+	border-radius: 5px;
+	color: var(--white);
+	cursor: pointer;
+}
+img {
+	width: 100%;
+	height: 50%;
+}
+h1 {
+	--white: hsl(0, 0%, 100%);
+	font-size: 1rem;
+}
+p {
+	font-size: 14px;
+	margin: 0;
+}
+h1,
+p {
+	margin-left: 1rem;
+	text-align: left;
+}
+span {
+	font-weight: 700;
+}
