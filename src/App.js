@@ -61,7 +61,9 @@ const App = () => {
 									country={country}
 								/>
 							</Route>
-							<Route exact path='/'>
+							<Route
+								exact
+								path='/rest-countries-api-with-color-theme-switcher-master'>
 								<CountryList
 									data={data}
 									clickCountry={
