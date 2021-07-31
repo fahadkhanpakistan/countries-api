@@ -1,27 +1,37 @@
 /** @format */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 :root {
-	--background: hsl(207, 26%, 17%);
+	--dark-blue-element: hsl(209, 23%, 22%);
+	--very-dark-blue-background: hsl(207, 26%, 17%);
+	--very-dark-blue-text: hsl(200, 15%, 8%);
+	--dark-gray-input: hsl(0, 0%, 52%);
+	--very-light-gray-background: hsl(0, 0%, 98%);
+	--white-text-element: hsl(0, 0%, 98%);
+}
+* {
+	box-sizing: border-box;
 }
 body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	width: 100%;
-	height: 100%;
 	font-family: 'Nunito Sans', sans-serif;
+	font-size: 1rem;
+	background-color: var(--very-dark-blue-background);
+}
+.app-container {
+	max-width: 100%;
 }
 .header {
-	width: 100%;
 	height: 50px;
 }
-section {
-	width: 100%;
-	height: calc(100% - 0);
-	background-color: var(--background);
-}
-section div {
-	width: 85%;
+.countryList-container {
+	width: 90%;
 	margin: auto;
-	padding-top: 2rem;
+}
+@media screen and (max-width: 600px) {
+	.countryList-container {
+		width: 100%;
+	}
 }

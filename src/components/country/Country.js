@@ -1,33 +1,78 @@
 /** @format */
 import './Country.css';
 import { Link } from 'react-router-dom';
-const Country = (props) => {
-	if (props.country.length > 0)
+const Country = ({ country, fetchBorderCountry }) => {
+	if (country.length > 0)
 		return (
-			<section>
-				{props.country.map(
+			<section className='country-container'>
+				<Link to='/rest-countries-api'>
+					<button className='back-btn'>Back</button>
+				</Link>
+				{country.map(
 					({
 						flag,
 						name,
 						capital,
 						region,
 						population,
+						currencies,
+						languages,
+						nativeName,
+						topLevelDomain,
+						subregion,
+						borders,
 					}) => (
-						<article key={name}>
-							<img
-								src={flag}
-								alt='Country Flag'
-							/>
-							<h2>{name}</h2>
-							<p>{capital}</p>
-							<p>{region}</p>
-							<p>{population}</p>
+						<article key={capital} className='country'>
+							<img src={flag} alt='Country Flag' />
+							<div className='country-info'>
+								<h1 className='title'>{name}</h1>
+								<div className='flex-info'>
+									<p>
+										<b>Native Name: </b>
+										{nativeName}
+									</p>
+									<p>
+										<b>Population: </b>
+										{population}
+									</p>
+									<p>
+										<b>Region: </b>
+										{region}
+									</p>
+									<p>
+										<b>Sub Region: </b>
+										{subregion}
+									</p>
+
+									<p>
+										<b>Capital: </b>
+										{capital}
+									</p>
+									<p>
+										<b>Top Level Domain: </b>
+										{topLevelDomain}
+									</p>
+									<p>
+										<b>Currencies: </b>
+										{currencies[0].name}
+									</p>
+									<p>
+										<b>Languages: </b>
+										{languages.map((lan) => lan.name).join(', ')}
+									</p>
+								</div>
+								<p className='border-countries'>
+									<b>Border Countries: </b>
+									{borders.map((c) => (
+										<button key={c} className='border-btn' onClick={() => fetchBorderCountry(c)}>
+											{c}
+										</button>
+									))}
+								</p>
+							</div>
 						</article>
 					)
 				)}
-				<Link to='/'>
-					<button>Back</button>
-				</Link>
 			</section>
 		);
 	return null;

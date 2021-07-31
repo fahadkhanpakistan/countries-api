@@ -1,9 +1,6 @@
 /** @format */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
-:root {
-	--dark: hsl(208, 29%, 23%);
-	--white: hsl(0, 0%, 100%);
-}
+
 ul {
 	margin-left: auto;
 	padding: 0;
@@ -16,10 +13,10 @@ ul {
 }
 ul li {
 	width: 200px;
-	height: 280px;
-	background-color: var(--dark);
+	height: 300px;
+	background-color: var(--dark-blue-element);
 	border-radius: 5px;
-	color: var(--white);
+	color: var(--white-text-element);
 	cursor: pointer;
 }
 img {
@@ -41,4 +38,21 @@ p {
 }
 span {
 	font-weight: 700;
+}
+@media screen and (max-width: 600px) {
+	ul {
+		flex-direction: column;
+		align-items: center;
+	}
+	ul li {
+		width: 250px;
+		height: 350px;
+	}
+	img {
+		min-width: 100%;
+	}
+
+	.country-list {
+		width: 100%;
+	}
 }

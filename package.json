@@ -2,7 +2,7 @@
 	"name": "rest-countries-api-with-color-theme-switcher-master",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://fahadkhanpakistan.github.io/rest-countries-api-with-color-theme-switcher-master",
+	"homepage": "http://fahadkhanpakistan.github.io/countries-api",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.14.1",
 		"@testing-library/react": "^11.2.7",
