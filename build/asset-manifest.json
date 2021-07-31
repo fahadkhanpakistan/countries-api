@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/rest-countries-api-with-color-theme-switcher-master/static/css/main.305286ac.chunk.css",
-    "main.js": "/rest-countries-api-with-color-theme-switcher-master/static/js/main.6b8edd50.chunk.js",
-    "main.js.map": "/rest-countries-api-with-color-theme-switcher-master/static/js/main.6b8edd50.chunk.js.map",
-    "runtime-main.js": "/rest-countries-api-with-color-theme-switcher-master/static/js/runtime-main.195c9a7e.js",
-    "runtime-main.js.map": "/rest-countries-api-with-color-theme-switcher-master/static/js/runtime-main.195c9a7e.js.map",
-    "static/js/2.f478b54c.chunk.js": "/rest-countries-api-with-color-theme-switcher-master/static/js/2.f478b54c.chunk.js",
-    "static/js/2.f478b54c.chunk.js.map": "/rest-countries-api-with-color-theme-switcher-master/static/js/2.f478b54c.chunk.js.map",
-    "index.html": "/rest-countries-api-with-color-theme-switcher-master/index.html",
-    "static/css/main.305286ac.chunk.css.map": "/rest-countries-api-with-color-theme-switcher-master/static/css/main.305286ac.chunk.css.map",
-    "static/js/2.f478b54c.chunk.js.LICENSE.txt": "/rest-countries-api-with-color-theme-switcher-master/static/js/2.f478b54c.chunk.js.LICENSE.txt"
+    "main.css": "/rest-countries-api/static/css/main.79e1255c.chunk.css",
+    "main.js": "/rest-countries-api/static/js/main.87cb4c9c.chunk.js",
+    "main.js.map": "/rest-countries-api/static/js/main.87cb4c9c.chunk.js.map",
+    "runtime-main.js": "/rest-countries-api/static/js/runtime-main.70b4de29.js",
+    "runtime-main.js.map": "/rest-countries-api/static/js/runtime-main.70b4de29.js.map",
+    "static/js/2.b23f5d57.chunk.js": "/rest-countries-api/static/js/2.b23f5d57.chunk.js",
+    "static/js/2.b23f5d57.chunk.js.map": "/rest-countries-api/static/js/2.b23f5d57.chunk.js.map",
+    "index.html": "/rest-countries-api/index.html",
+    "static/css/main.79e1255c.chunk.css.map": "/rest-countries-api/static/css/main.79e1255c.chunk.css.map",
+    "static/js/2.b23f5d57.chunk.js.LICENSE.txt": "/rest-countries-api/static/js/2.b23f5d57.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.195c9a7e.js",
-    "static/js/2.f478b54c.chunk.js",
-    "static/css/main.305286ac.chunk.css",
-    "static/js/main.6b8edd50.chunk.js"
+    "static/js/runtime-main.70b4de29.js",
+    "static/js/2.b23f5d57.chunk.js",
+    "static/css/main.79e1255c.chunk.css",
+    "static/js/main.87cb4c9c.chunk.js"
   ]
 }
