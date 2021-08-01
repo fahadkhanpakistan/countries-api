@@ -5,7 +5,7 @@ const Country = ({ country, fetchBorderCountry }) => {
 	if (country.length > 0)
 		return (
 			<section className='country-container'>
-				<Link to='/rest-countries-api'>
+				<Link to='/countries-api'>
 					<button className='back-btn'>Back</button>
 				</Link>
 				{country.map(

@@ -64,7 +64,7 @@ const App = () => {
 						<Route path='/country'>
 							<Country country={country} fetchBorderCountry={fetchBorderCountry} />
 						</Route>
-						<Route exact path='/rest-countries-api'>
+						<Route exact path='/countries-api'>
 							<CountryList
 								filteredCountryList={filteredCountryList}
 								clickCountry={clickCountry}
