@@ -15,38 +15,43 @@ const App = () => {
 	const [isDarkMode, setIsDarkMode] = useState(true);
 
 	useEffect(() => {
-		axios.get('https://restcountries.eu/rest/v2/all').then((data) => {
+		axios.get('https://restcountries.com/v2/all').then(data => {
 			setData(data.data);
 			setFilteredCountryList(data.data);
 		});
 	}, []);
 
 	// Methods!!!
-	const clickCountry = async (countryName) => {
+	const clickCountry = async countryName => {
 		let data = await axios
-			.get(`https://restcountries.eu/rest/v2/name/${countryName}`)
-			.then((res) => res);
+			.get(
+				`
+https://restcountries.com/v2/name/${countryName}`
+			)
+			.then(res => res);
 		getCountry(data.data);
 	};
 	//Seacrh Method!
-	const onChangeCountryName = async (e) => {
+	const onChangeCountryName = async e => {
 		setCountryName(e.target.value);
 		let data = await axios
-			.get(`https://restcountries.eu/rest/v2/name/${countryName}`)
-			.then((res) => res);
+			.get(`https://restcountries.com/v2/name/${countryName}`)
+			.then(res => res);
 		setFilteredCountryList(data.data);
 	};
 	//fetch border country
-	const fetchBorderCountry = (borderCountryName) => {
-		let temp = data.filter((name) => name.alpha3Code === borderCountryName);
+	const fetchBorderCountry = borderCountryName => {
+		let temp = data.filter(name => name.alpha3Code === borderCountryName);
 		getCountry(temp);
 	};
 	//filter country
-	const filterCountryList = (e) => {
+	const filterCountryList = e => {
 		if (e.target.value === 'All') {
 			return setFilteredCountryList(data);
 		}
-		let filteredList = data.filter((country) => country.region === e.target.value);
+		let filteredList = data.filter(
+			country => country.region === e.target.value
+		);
 		setFilteredCountryList(filteredList);
 	};
 	//handle dark mode
@@ -56,13 +61,20 @@ const App = () => {
 	return (
 		<article className='app-container'>
 			<header className='header'>
-				<Nav title='Where in the world?' isDarkMode={isDarkMode} handleDarkMode={handleDarkMode} />
+				<Nav
+					title='Where in the world?'
+					isDarkMode={isDarkMode}
+					handleDarkMode={handleDarkMode}
+				/>
 			</header>
 			<section className='countryList-container'>
 				<Router>
 					<Switch>
 						<Route path='/country'>
-							<Country country={country} fetchBorderCountry={fetchBorderCountry} />
+							<Country
+								country={country}
+								fetchBorderCountry={fetchBorderCountry}
+							/>
 						</Route>
 						<Route exact path='/countries-api'>
 							<CountryList
